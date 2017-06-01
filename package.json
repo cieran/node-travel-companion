@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "NodeJS Powered Real Time Travel Companion",
   "main": "server.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/cieran/node-travel-companion.git"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
