@@ -1,5 +1,4 @@
 var express = require('express')
-var request = require('request')
 var morgan = require('morgan');
 var path = require('path');
 var cookieParser = require('cookie-parser');

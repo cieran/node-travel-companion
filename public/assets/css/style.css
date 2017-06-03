@@ -1,0 +1,21 @@
+html{
+	margin: 0;
+	padding: 0;
+}
+
+.icon{
+	color: grey;
+}
+
+.transport-wrapper > a{
+	width: 75px;
+	height: 75px;
+}
+
+.field.has-addons{
+	display: inline-flex;
+}
+
+.container{
+	line-height: 5em;
+}
