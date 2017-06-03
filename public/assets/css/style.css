@@ -3,19 +3,15 @@ html{
 	padding: 0;
 }
 
-.icon{
-	color: grey;
-}
-
-.transport-wrapper > a{
-	width: 75px;
-	height: 75px;
-}
-
 .field.has-addons{
 	display: inline-flex;
 }
-
 .container{
-	line-height: 5em;
+	line-height: 2em;
+}
+.wrap{
+	margin-top: 5%;
+}
+.subtitle{
+	padding-bottom: 5%;
 }

@@ -3,42 +3,24 @@
   <div class="container">
         <div class="has-text-centered">
             <h1 class="title">Real Time Travel Companion</h1>
-            <h2 class="subtitle">by <a href="#">Cieran Neeson</a></h2>
-          
+            <h2 class="subtitle">by <a href="#">Cieran Neeson</a> &amp; <a href="#">Manus Gallagher</a></h2>
+          <form id="form" action="/res" method="POST">
           <div class="field has-addons">
-            <p class="control">
-              <input class="input is-primary is-medium" type="stop" placeholder="Enter a Stop..">
-            </p>
-            <p class="control">
-              <button type="submit" class="button is-primary is-outlined is-medium">FIND</button>
+              <p class="control">
+                <input class="input is-primary is-medium" name="stop" placeholder="Enter a Stop.." required>
+              </p>
+          </div>
+          <div class="field wrap">
+            <p class="transport-wrapper field">
+              <input type="image" src="img/sq_dublinbus.png"  class="button is-warning is-large is-outlined" name="service" value="Dublin Bus">
+              <input type="image" src="img/sq_irishrail.png" class="button is-primary is-large is-outlined" name="service" value="Irish Rail">
+            </p>          
+            <p class="transport-wrapper field">
+              <input type="image" src="img/sq_luas.png" class="button is-info is-large is-outlined" name="service" value="Luas">
+              <input type="image" src="img/sq_buseireann.png" class="button is-danger is-large is-outlined" name="service" value="Bus Eireann">
             </p>
           </div>
-
-
-          <p class="transport-wrapper field">
-            <a class="button is-warning is-large is-outlined">
-              <span class="icon is-medium">
-                <i class="fa fa-train" aria-hidden="true"></i>
-              </span>
-            </a>
-            <a class="button is-primary is-large is-outlined">
-              <span class="icon is-medium">
-                <i class="fa fa-bus" aria-hidden="true"></i>
-              </span>
-            </a>
-          </p>          
-          <p class="transport-wrapper field">
-            <a class="button is-info is-large is-outlined">
-              <span class="icon is-medium">
-                <i class="fa fa-subway" aria-hidden="true"></i>
-              </span>
-            </a>
-            <a class="button is-danger is-large is-outlined">
-              <span class="icon is-medium">
-                <i class="fa fa-motorcycle" aria-hidden="true"></i>
-              </span>
-            </a>
-          </p>
+          </form>
         </div>
     </div> 
     </div> 
