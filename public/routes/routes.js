@@ -36,12 +36,13 @@ module.exports = function(app){
 			      var api_results = data.results;
 			      console.log(api_results);
 			     
-			      	res.render('fetched', {title:'Results', results:api_results});
+			      	res.render('fetched', {title:'Results', results: api_results});
 			    }
 			});
 
 		}else{
-			console.log("service wasn't DB");
+			console.log("service wasn't DB, working on that next.");
+			res.redirect('/');
 		}
 	});
 
