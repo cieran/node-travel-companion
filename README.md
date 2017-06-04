@@ -12,6 +12,7 @@ Irish Rail API: http://api.irishrail.ie/realtime/realtime.asmx/getStationDataByN
 
 
 
+
 Useful Resources:
 
 https://www.npmjs.com/package/irishrail-realtime-node
