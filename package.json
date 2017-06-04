@@ -11,15 +11,19 @@
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "eyes": "^0.1.8",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
     "morgan": "^1.8.2",
     "path": "^0.12.7",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {},
   "scripts": {
     "test": "nano server.js",
     "start": "node server.js"
   },
-  "author": "Cieran Neeson",
+  "author": "Cieran Neeson & Manus Gallagher",
   "license": "ISC"
 }
