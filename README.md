@@ -7,6 +7,7 @@ Luas API: http://luasforecasts.rpa.ie/xml/get.ashx?action=forecast&stop=ran&encr
 Irish Rail API: http://api.irishrail.ie/realtime/realtime.asmx/getStationDataByNameXML?StationDesc=Maynooth
 
 Useful Resources:
+
 https://www.npmjs.com/package/irishrail-realtime-node
 
 http://api.irishrail.ie/realtime/
