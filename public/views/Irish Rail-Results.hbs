@@ -1,0 +1,22 @@
+<table class="table is-striped">
+	<thead>
+		<th>Station</th>
+	   	<th>Origin</th> 
+	   	<th>Destination</th>
+	   	<th>Direction</th>
+	   	<th>Departing</th>
+	   	<th>Due</th>
+	</thead>
+	<tbody>
+		{{#each results}}
+		<tr>
+			<td>{{this.Stationfullname}}</td>
+			<td>{{this.Origin}}</td>
+			<td>{{this.Destination}}</td>
+			<td>{{this.Direction}}</td>
+			<td>{{this.Schdepart}}</td>
+		    <td>{{this.Duein}}</td>
+  		</tr>
+		{{/each}}
+	</tbody>
+</table>
