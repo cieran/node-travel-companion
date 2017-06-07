@@ -36,7 +36,6 @@ module.exports = function(app){
 			    } else {
 			      // data is already parsed as JSON:
 			      var api_results = data.results;
-			      console.log(api_results);
 			      res.render('fetched', {title:service + ' Results', results: api_results});
 			    }
 			});
@@ -74,10 +73,7 @@ module.exports = function(app){
 					console.log(resp.statusCode);
 				}else{
 					parseString(data, {explicitArray : false}, function (err, result) {
-						//console.log(util.inspect(result, false, null));
 						var api_results = cleaner.scrapeJSON(result, service);
-					    //var api_results = JSON.stringify(result);
-					    //console.log(util.inspect(api_results, false, null));
 					    res.render(service + '-Results', {title:service + ' Results', results: api_results});
 					});
 				}
