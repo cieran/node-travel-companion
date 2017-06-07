@@ -4,9 +4,10 @@ var eyes = require('eyes');
 var fs = require('fs');
 var parseString = require('xml2js').parseString;
 var http = require('http');
+var cleaner = require('../assets/js/json_cleaner.js');
+var util = require('util');
 
 module.exports = function(app){
-
 	app.get('/', function(req, res){
 		res.render('index', {title: 'Get Started!'});
 	});
@@ -36,8 +37,7 @@ module.exports = function(app){
 			      // data is already parsed as JSON:
 			      var api_results = data.results;
 			      console.log(api_results);
-			     
-			      	res.render('fetched', {title:service + ' Results', results: api_results});
+			      res.render('fetched', {title:service + ' Results', results: api_results});
 			    }
 			});
 
@@ -53,8 +53,31 @@ module.exports = function(app){
 				}else if(res.statusCode !== 200){
 					console.log(resp.statusCode);
 				}else{
-					parseString(data, {explicitArray : false}, function (err, result) {
+					parseString(data, {explicitArray : true}, function (err, result) {
+						cleaner.scrapeJSON(result);
 					    var api_results = JSON.stringify(result);
+					    res.render(service + '-Results', {title:service + ' Results', results: api_results});
+					});
+				}
+			});
+			
+		}else if(service == "Irish Rail"){
+			var url = "http://api.irishrail.ie/realtime/realtime.asmx/getStationDataByNameXML?StationDesc=" + stop;
+			request.get({
+				url: url,
+				xml: true,
+				headers: {'User-Agent' : 'request'}
+			}, (err, resp, data) => {
+				if(err){
+					console.log(err);
+				}else if(res.statusCode !== 200){
+					console.log(resp.statusCode);
+				}else{
+					parseString(data, {explicitArray : false}, function (err, result) {
+						//console.log(util.inspect(result, false, null));
+						var api_results = cleaner.scrapeJSON(result, service);
+					    //var api_results = JSON.stringify(result);
+					    //console.log(util.inspect(api_results, false, null));
 					    res.render(service + '-Results', {title:service + ' Results', results: api_results});
 					});
 				}
